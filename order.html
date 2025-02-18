@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Confirm your food delivery order from Food Delivery Online">
+    <link rel="stylesheet" href="accessible.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Confirm Your Order - Food Delivery Online</title>
+</head>
+<body class="order-page">
+    <header>
+        <nav class="navbar" aria-label="Main navigation">
+            <div class="left">
+                <a href="./index.html" aria-label="Return to home page">
+                    <img src="./logo.svg" alt="Food Delivery Online Logo"/>
+                </a>
+                <a href="./index.html">
+                    <span>FoodDeliveryOnline</span>
+                </a>
+            </div>
+            <div class="right">
+                <a href="#about">About Us</a>
+                <a href="./contact.html">Contact</a>
+                <a href="./signup.html">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="heading">Confirm Your Order</h1>
+        <section class="order-body" aria-label="Order confirmation details">
+            <div class="order-details">
+                <div id="dynamicOrderInfo" aria-live="polite">
+                    <!-- Dynamic order information will be inserted here -->
+                </div>
+                <address class="address" aria-label="Delivery address">
+                    221B Baker Street, Marylebone, London, W1U 3BS, England.
+                </address>
+                <button class="button" onclick="paymentAlert()" aria-label="Proceed to payment">Pay Now</button>
+            </div>
+            <div class="order-image" aria-label="Image of ordered item">
+                <img src="" id="orderImage" alt="" aria-live="polite"/> <!-- Alt text will be set dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Food Delivery Online. All rights reserved.</p>
+        <nav aria-label="Footer navigation">
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./privacy.html">Privacy Policy</a></li>
+                <li><a href="./terms.html">Terms of Service</a></li>
+            </ul>
+        </nav>
+        <div class="social-media" aria-label="Social media links">
+            <a href="#" aria-label="Visit our Facebook page">
+                <img src="./icons/facebook_icon.png" alt="Facebook icon"/>
+            </a>
+            <a href="#" aria-label="Visit our Instagram page">
+                <img src="./icons/instagram_icon.png" alt="Instagram icon"/>
+            </a>
+            <a href="#" aria-label="Visit our Twitter page">
+                <img src="./icons/twitter_icon.png" alt="Twitter icon"/>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        window.onload = () => {
+            const params = new URLSearchParams(window.location.search);
+            const foodName = params.get('food');
+            const orderTime = params.get('time');
+            const imageName = params.get('image');
+
+            const dynamicOrderInfo = document.getElementById("dynamicOrderInfo");
+            const orderImage = document.getElementById("orderImage");
+
+            if (foodName && orderTime) {
+                dynamicOrderInfo.innerHTML = `
+                    <div role="group" aria-label="Order information">
+                        <p>You have ordered: <strong>${foodName}</strong></p>
+                        <p>Estimated delivery time: <strong>${orderTime}</strong></p>
+                    </div>
+                `;
+            }
+
+            if (imageName) {
+                orderImage.src = `./menu_images/${imageName}`;
+                orderImage.alt = `Image of ${foodName}`; // Dynamic alt text based on ordered item
+            }
+        };
+
+        const paymentAlert = () => {
+            const alert = "You will be redirected to the payment page soon...";
+            window.alert(alert);
+        }
+    </script>
+</body>
+</html>

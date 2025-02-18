@@ -1,0 +1,296 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+}
+
+.contact-page, .signup-page, .order-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+/*LINE STYLING*/
+
+.line {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    height: 3px;
+    width: 100%;
+    background: #FF630B;
+}
+
+/*NAVBAR STYLING*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #FF630B;
+    padding: 10px 8px;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    color: #FF630B;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.left>a {
+    color: #FF630B;
+    font-weight: 700;
+    font-size: 24px;
+    text-decoration: none;
+    margin-left: 8px;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 500px;
+}
+
+/*HERO STYLING*/
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 60px;
+}
+
+.hero-heading {
+    font-size: 84px;
+    font-weight: 800;
+}
+
+.hero-body {
+    font-size: 20px;
+}
+
+.hero-image {
+    width: 650px;
+    height: 500px;
+    border-radius: 50%;
+}
+
+
+/*MENU STYLING*/
+
+.menu-heading {
+    font-size: 48px;
+    font-weight: 700;
+    padding-left: 60px;
+}
+
+.menu {
+    padding: 20px 60px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.menu-card {
+    border-radius: 16px;
+    background: #eaeaea;
+    width: 250px;
+    min-height: 350px;
+    padding: 20px 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-card>img {
+    width: 200px;
+    height: 120px;
+    border-radius: 16px;
+}
+
+.card-text {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.card-text>.title {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.card-text>.delivery-time {
+    font-style: italic;
+}
+
+.menu-card>.button {
+    background: #FF630B;
+    width: 100px;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/*FOOTER STYLING*/
+.footer {
+    background-color: #FF630B;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.footer li {
+    margin-left: 20px;
+}
+
+.footer a {
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    display: flex;
+}
+
+.social-media a {
+    margin-left: 10px;
+}
+
+.social-media img {
+    width: 25px;
+    height: 25px;
+}
+
+/*SIGN UP FORM STYLING*/
+
+.form {
+    font-family: Poppins, sans-serif;
+    width: 400px;
+    margin: 20px auto;
+
+    border: 2px solid #FF630B;
+    border-radius: 16px;
+    padding: 10px 20px 20px;
+    flex: 1;
+}
+
+.form>.heading {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+input:focus, textarea:focus, button:focus {
+    outline: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.button {
+    background: #FF630B;
+    width: 100px;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    align-self: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.unreadable {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-weight: bold;
+}
+
+/*CONTACTS STYLING*/
+
+.contact {
+    padding: 20px 60px;
+    flex: 1;
+}
+
+.contact-input {
+    width:75%;
+    margin: 20px 0px;
+}
+
+.contact>.heading {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+/*ORDER PAGE STYLING*/
+
+main {
+    flex: 1;
+}
+
+main>.heading {
+    font-weight: 700;
+    padding-left: 60px;
+
+}
+
+.order-body {
+    margin: 20px 60px;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    background: #eaeaea;
+    border-radius: 16px;
+    width: 60%;
+    max-height: 500px;
+    align-items: center;
+}
+
+.order-image {
+    width: 50%;
+}
+
+#orderImage {
+    width: 100%;
+    border-radius: 16px;
+}

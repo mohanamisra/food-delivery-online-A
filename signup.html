@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Sign up for Food Delivery Online to start ordering delicious food">
+    <link rel="stylesheet" href="accessible.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Sign Up - Food Delivery Online</title>
+</head>
+<body class="signup-page">
+<header>
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="left">
+            <a href="./index.html" aria-label="Return to home page">
+                <img src="./logo.svg" alt="Food Delivery Online Logo"/>
+            </a>
+            <a href="./index.html">
+                <span>FoodDeliveryOnline</span>
+            </a>
+        </div>
+        <div class="right">
+            <a href="#about">About Us</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./signup.html" aria-current="page">Sign Up</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="form" aria-labelledby="signup-heading">
+        <h1 id="signup-heading" class="heading">Sign Up</h1>
+
+        <form action="/signup" method="post" novalidate aria-label="Sign up form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        required
+                        aria-required="true"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email address"
+                        required
+                        aria-required="true"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        required
+                        aria-required="true"
+                        pattern="[0-9]{10}"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea
+                        id="address"
+                        name="address"
+                        placeholder="Enter your full address"
+                        required
+                        aria-required="true"
+                ></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        required
+                        aria-required="true"
+                        minlength="8"
+                        aria-describedby="password-requirements"
+                >
+                <span id="password-requirements" class="visually-hidden">
+                        Password must be at least 8 characters long
+                    </span>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input
+                        type="password"
+                        id="confirm-password"
+                        name="confirm-password"
+                        placeholder="Confirm your password"
+                        required
+                        aria-required="true"
+                        aria-describedby="password-match"
+                >
+                <span id="password-match" class="visually-hidden">
+                        Must match the password entered above
+                    </span>
+            </div>
+
+            <button
+                    type="button"
+                    class="button"
+                    onclick="signupAlert()"
+                    aria-label="Complete sign up"
+            >
+                Sign Up
+            </button>
+
+            <div class="signin-link" role="complementary">
+                <p>Already have an account? <a href="#" aria-label="Go to sign in page">Sign In</a></p>
+            </div>
+        </form>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2025 Food Delivery Online. All rights reserved.</p>
+    <nav aria-label="Footer navigation">
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./privacy.html">Privacy Policy</a></li>
+            <li><a href="./terms.html">Terms of Service</a></li>
+        </ul>
+    </nav>
+    <div class="social-media" aria-label="Social media links">
+        <a href="#" aria-label="Visit our Facebook page">
+            <img src="./icons/facebook_icon.png" alt="Facebook icon"/>
+        </a>
+        <a href="#" aria-label="Visit our Instagram page">
+            <img src="./icons/instagram_icon.png" alt="Instagram icon"/>
+        </a>
+        <a href="#" aria-label="Visit our Twitter page">
+            <img src="./icons/twitter_icon.png" alt="Twitter icon"/>
+        </a>
+    </div>
+</footer>
+<script src="accessible.js"></script>
+</body>
+</html>
