@@ -294,3 +294,29 @@ main>.heading {
     width: 100%;
     border-radius: 16px;
 }
+
+/*OFFERS PAGE STYLING*/
+
+.video-page {
+    height: 100vh;
+}
+
+.video-container {
+    padding: 20px 60px;
+}
+
+video {
+    width: 50%;
+}
+
+.offers-heading {
+    font-size: 32px;
+    font-weight: 700;
+    padding-left: 60px;
+}
+
+.video-page>.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
